@@ -1,11 +1,17 @@
 {% extends 'game/base.html' %}
 {% block content %}
-	<h1>WELCOME TO SARCASM {{user}}</h1>
-	{% if user.is_authenticated %}
+<div class="row">
+	<div class="col-md-8">
+		<h1>A warm WELCOME TO SARCASM {{user}}</h1>
+		{% if user.is_authenticated %}
+	</div>
+	<div class="col-md-4">	
 	<a href="{% url 'logout' %}"> <button class="btn btn-outline-info" type="submit">Logout</button></a>
 	<a href="{% url 'play' %}"> <button class="btn btn-outline-info" type="submit">Let's play</button></a>
+</div>
 	{% else %}
-	<a href="{% url 'play' %}"> <button class="btn btn-outline-info" type="submit">Login</button></a>
-		
+<!-- 	<a href="{% url 'play' %}"> <button class="btn btn-outline-info" type="submit">Login</button></a>
+ -->	<a href="{% url 'register' %}"> <button class="btn btn-outline-info" type="submit">Register</button></a>
+	</div>	
 	{% endif %}
 {% endblock %}	
