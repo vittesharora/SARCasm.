@@ -1,0 +1,5 @@
+{% extends 'game/base.html' %}
+{% block content %}
+	<h1>Congratulations! You have logged in. Let's play now</h1>
+		<a href="{% url 'logout' %}"> <button class="btn btn-outline-info" type="submit">Logout</button></a>
+{% endblock %}

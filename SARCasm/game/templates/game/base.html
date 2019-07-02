@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	{% block head %}
+	{% endblock %}    
+
+	<title>
+		SARCasm
+	</title>
+</head>
+<body>
+	<!-- <div class="navbar vivek">
+    <a href="#"><img src="images/home.svg"></a>
+    <a href="#"><img src="images/instructions.svg"></a>
+    <a href="#"><img src="images/leaderboard.svg"></a>
+    <a href="#"><img src="images/forum.svg"></a>
+    <a href="#"><img src="images/trophy.svg" id="trophy"></a>
+  </div> -->
+
+  <div class="footer vivek">
+    <a href="#"><img src="game/images/fb.svg"></a>
+    <a href="#"><img src="images/linkedin-sign.svg"></a>
+    <a href="#"><img src="images/youtube.svg"></a>
+  </div>
+	<div>
+		{% if messages %}
+			{% for message in messages %}
+				<div class="alert alert-{{message.tags}}">
+					{{message}}
+				</div>
+			{% endfor %}
+		{% endif %}		
+	</div>
+	{% block content%}
+
+	{% endblock %}
+</body>
+</html>
