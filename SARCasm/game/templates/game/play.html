@@ -2,4 +2,22 @@
 {% block content %}
 	<h1>Congratulations! You have logged in. Let's play now</h1>
 		<a href="{% url 'logout' %}"> <button class="btn btn-outline-info" type="submit">Logout</button></a>
+		<div class="card">
+
+			<!-- HINT -->
+			<!-- {{level.hint}} -->	
+			
+				{% if level.image.url is not None %}
+			 <div class="card-img"> <img src={{level.image.url}} class="img-responsive"> </div>{% endif %}
+		
+				<div class="question">
+					<div class="title"> Level {{level.level_id}} </div>
+					<div class="sub-title"> {{level.question}} </div>
+				<form method="POST" action=""> {% csrf_token %} {{form}}  
+						<input type="submit" value="submit" name="" class="btn btn-primary">
+				</form>
+		</div>
+				</div>
+		</div>
+
 {% endblock %}

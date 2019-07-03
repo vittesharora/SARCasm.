@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+		'django.contrib.sites',						#added to import in game/views
     'game',
     'users',
     'crispy_forms',
-
 ]
+SITE_ID = 1														#added to import in game/views
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

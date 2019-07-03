@@ -16,4 +16,5 @@ class UserRegisterForm(UserCreationForm):
 
 	class Meta:
 		model=User
-		fields=['username','email','roll','password1','password2']
+		fields=['username', 'first_name', 'last_name','email','roll','password1','password2'] 
+		#first_name and last_name added just for convenience
