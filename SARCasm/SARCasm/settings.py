@@ -134,9 +134,7 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
-LOGIN_REDIRECT_URL='game-home'
-
-LOGIN_URL='login'
+# LOGIN_REDIRECT_URL='game-home'
 
 EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -156,4 +154,4 @@ SOCIAL_AUTH_FACEBOOK_KEY='459973647912498'
 SOCIAL_AUTH_FACEBOOK_SECRET='4e027db007e00e501efb663f45fc1d81'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'register'
+LOGIN_REDIRECT_URL = 'game-home'
