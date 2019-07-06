@@ -7,6 +7,7 @@ from .models import Player,userdata
 class UserRegisterForm(forms.ModelForm):
 	email=forms.EmailField()
 	roll=forms.CharField(max_length=9)
+	referral=forms.CharField(max_length=100)
 
 	def __init__(self, *args, **kwargs):
 		super(UserRegisterForm, self).__init__(*args, **kwargs)

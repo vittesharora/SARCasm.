@@ -10,12 +10,15 @@ class userdata(models.Model):
 	username=models.CharField(max_length=200)
 	email=models.CharField(max_length=200)
 	roll=models.CharField(max_length=9)
-
+	referral=models.CharField(max_length=100,default=0)
+	referral_count=models.IntegerField(default=0)
 
 class Player(models.Model):
 	user = models.OneToOneField(User, on_delete = models.CASCADE)
 	current_level = models.ForeignKey(Level, default = Level.DEFAULT_LEVEL, on_delete = models.CASCADE)
 	current_level_time = models.DateTimeField(default=timezone.now)
+	# DEFAULT_POINT=0
+	points=models.CharField(max_length=10,default="0")
 
 	def __str__(self):
 		return self.user.username
